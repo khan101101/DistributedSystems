@@ -10,10 +10,16 @@ public void setName(String name)
 { 
  this.name = name; 
 }
+
+public String setGender(String gender)
+{
+	return this.gender = gender;
+}
 public String getGender()
 {
 return gender;
 }
+
 public String getNoise() 
 {
 return noise; 
