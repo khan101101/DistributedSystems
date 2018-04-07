@@ -23,21 +23,45 @@ final: google it!
 
 
 	import java.util.ArrayList; 
+
+
+
 	public class ZooManager{
 	ArrayList <String> Animal = new ArrayList<String> (); 
-	public ZooManager(){}
+	public ZooManager()
+    {
+        //constructor
+    }
 	
-	public static void main(String[]args)
-	{
+        
+        
+	public static void main(String[]args){
+        
+        
 	Animal animal = new Animal(); //instanz der Klasse Animal
+    Bird bird = new Bird();
 	animal.setName("Dog"); 
 	animal.setGender("Female");
 	animal.setNoise("Bau");
+    
+    bird.setName("Tooti");
+    bird.setGender("Male");
+    bird.setNoise("Mee-Mee");
+    //Animal.add(bird); it does'nt work!
+    System.out.println("---------an Animal-------");
 	System.out.println(animal.getName()); 
 	System.out.println(animal.setGender("Female"));
 	System.out.println(animal.getNoise());
+    System.out.println("--------A Bird--------");
+    System.out.println(bird);
+        
+    System.out.println(bird.getName());
+    System.out.println(bird.getGender());
+    System.out.println(bird.getNoise());
 
 	}
+        
+        
 	public void addAnimals()
 	{
 		
