@@ -1,6 +1,22 @@
-/*private : only in the same class
- public: any class
-protected : all classes in the same pakage
+/*
+
+***************************Access Modifiers and Inheritance********************************
+When you create a subclass of some class, the methods in the subclass cannot have less accessible access modifiers assigned to them 
+than they had in the superclass. For instance, if a method in the superclass is public then it must be public in the subclass too,
+in case the subclass overrides the method. If a method in the superclass is protected then it must be either protected or public in 
+the subclass.
+
+While it is not allowed to decrease accessibility of an overridden method, it is allowed to expand accessibility 
+of an overridden method. For instance, if a method is assigned the default access modifier in the superclass, 
+then it is allowed to assign the overridden method in the subclass the public access modifier.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------private and protected access-modifiers are forbidden to assign to classes----------------------------------
+private : accessible only in the same class
+ public: any class have access from anywhere even if the code is in a different class and different package!
+ default (package): accessible inside the same class and in the all classes in the same pakage have access
+protected : same as package access modifier + subclasses have access to protected methods and variables of the superclass
 static:
 final: google it!
 */
