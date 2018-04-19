@@ -47,13 +47,15 @@ final: google it!
     bird.setName("Tooti");
     bird.setGender("Male");
     bird.setNoise("Mee-Mee");
+
     //Animal.add(bird); it does'nt work!
+
     System.out.println("---------an Animal-------");
 	System.out.println(animal.getName()); 
 	System.out.println(animal.setGender("Female"));
 	System.out.println(animal.getNoise());
     System.out.println("--------A Bird--------");
-    System.out.println(bird);
+    System.out.println(bird.toString());
         
     System.out.println(bird.getName());
     System.out.println(bird.getGender());
