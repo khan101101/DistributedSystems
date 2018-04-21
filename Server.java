@@ -11,7 +11,7 @@ public class Server {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		ServerSocket ss = new ServerSocket(1117);
+		ServerSocket ss = new ServerSocket();
 		Socket s = ss.accept();
 		
 		InputStream is = s.getInputStream(); // byteStream reading
