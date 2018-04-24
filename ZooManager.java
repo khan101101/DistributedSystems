@@ -1,84 +1,65 @@
-/*
-source: http://tutorials.jenkov.com/java/access-modifiers.html
-***************************Access Modifiers and Inheritance********************************
-When you create a subclass of some class, the methods in the subclass cannot have less accessible access modifiers assigned to them 
-than they had in the superclass. For instance, if a method in the superclass is public then it must be public in the subclass too,
-in case the subclass overrides the method. If a method in the superclass is protected then it must be either protected or public in 
-the subclass.
+import java.io.*;
+import java.util.ArrayList;
+public class ZooManager {
 
-While it is not allowed to decrease accessibility of an overridden method, it is allowed to expand accessibility 
-of an overridden method. For instance, if a method is assigned the default access modifier in the superclass, 
-then it is allowed to assign the overridden method in the subclass the public access modifier.
-
-------------------------------------------------------------------------------------------------------------------------------------
-
----------------------private and protected access-modifiers are forbidden to assign to classes----------------------------------
-private : accessible only in the same class
- public: any class have access from anywhere even if the code is in a different class and different package!
- default (package): accessible inside the same class and in the all classes in the same pakage have access
-protected : same as package access modifier + subclasses have access to protected methods and variables of the superclass
-static:
-final: google it!
-*/
-
-
-	import java.util.ArrayList; 
-
-
-
-	public class ZooManager{
-	ArrayList <String> Animal = new ArrayList<String> (); 
-	public ZooManager()
-    {
-        //constructor
-    }
 	
-        
-        
-	public static void main(String[]args){
-        
-        
-	Animal animal = new Animal(); //instanz der Klasse Animal
-    Bird bird = new Bird();
-	animal.setName("Dog"); 
-	animal.setGender("Female");
-	animal.setNoise("Bau");
-    
-    bird.setName("Tooti");
-    bird.setGender("Male");
-    bird.setNoise("Mee-Mee");
-
-    //Animal.add(bird); it does'nt work!
-
-    System.out.println("---------an Animal-------");
-	System.out.println(animal.getName()); 
-	System.out.println(animal.setGender("Female"));
-	System.out.println(animal.getNoise());
-    System.out.println("--------A Bird--------");
-    System.out.println(bird.toString());
-        
-    System.out.println(bird.getName());
-    System.out.println(bird.getGender());
-    System.out.println(bird.getNoise());
-
-	}
-        
-        
-	public void addAnimals()
-	{
+	ArrayList<Animal> animals = new ArrayList<>();
+	Animal a = new Animal();
+	
+	public static void main(String[] args) throws Exception{
+		// TODO Auto-generated method stub
+		Animal animal = new Animal();
+		animal.setGender("male");
+		animal.setName("Fish");
+		animal.setNoise("Blub");
 		
-	}
-	public void showAnimals()
-	{
+		Animal animal2 = new Animal();
+		animal2.setGender("female");
+		animal2.setName("Wolf");
+		animal2.setNoise("ROAR");
 		
-	}
-	public void saveData()
-	{
+		ZooManager zm2 = new ZooManager();
 		
-	}
-	public void readData()
-	{
+		zm2.animals.add(animal);// "animal is the type of object passed into the arraylist
+		zm2.animals.add(animal2);
+		
+		Bird bird = new Bird();
+		
+		bird.setName("Bird");
+		bird.setGender("Male");
+		bird.setNoise("PiepPiep");
+		bird.setFeatherColor("blue");
+		
+		zm2.animals.add(bird);
+		
+		Mammal mammal = new Mammal();
+		mammal.setName("Lion");
+		mammal.setGender("Male");
+		mammal.setNoise("ROARRR");
+		mammal.setFood("Meat");
+		mammal.setFurcolor("yellow");
+		
+		zm2.animals.add(mammal);
+		
+		for(int i = 0; i < zm2.animals.size(); i++){
+			System.out.println(zm2.animals.get(i).getData());
+			
+		}
+
+		
 		
 	}
 	
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

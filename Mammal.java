@@ -1,22 +1,50 @@
+
 public class Mammal extends Animal{
-private String furColor; 
-private String food; 
-public Mammal() 
-{} 
-public String getFood() 
-{
-return food; 
-}
-public void setFood (String food) 
-{
-this.food =food; 
-}
-public String getFurColor() 
-{
-return furColor;
-}
-public void setFurColor(String furColor)
-{
-this.furColor = furColor; 
-}
+
+	private String furcolor;
+	
+	private String food;
+
+	public String getFood() {
+		return food;
+	}
+
+	public void setFood(String food) {
+		this.food = food;
+	}
+
+	public String getFurcolor() {
+		return furcolor;
+	}
+
+	public void setFurcolor(String furcolor) {
+		this.furcolor = furcolor;
+	}
+	
+	public String getData(){
+		String s = super.getData() + " Food: " + getFood() + " Furcolor: " + getFurcolor();
+		return s;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
